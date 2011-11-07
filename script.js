@@ -1,5 +1,5 @@
 $(function(){
-jumbing_blocks = {
+jumping_blocks = {
 	
 	container : $('#container'),
 	block : 'images/block.png',
@@ -9,7 +9,7 @@ jumbing_blocks = {
 	init : function(cols, rows){
 		
 		
-		var img = $('<img>').attr('src', jumbing_blocks.block);
+		var img = $('<img>').attr('src', jumping_blocks.block);
 		for( var c=0; c<cols; c++){
 			
 			var head = {x:this.origin.x, y:this.origin.y};
@@ -33,7 +33,7 @@ jumbing_blocks = {
 		
 	}
 	
-	,jumbing: function(){
+	,jumping: function(){
 		
 		this.container.children().hover(function(){
 			$(this).animate({top: $(this).attr('otop')-100}, 500);
@@ -43,6 +43,6 @@ jumbing_blocks = {
 	}
 	
 }
-	jumbing_blocks.init(20,20);
-	jumbing_blocks.jumbing();
+	jumping_blocks.init(20,20);
+	jumping_blocks.jumping();
 });
